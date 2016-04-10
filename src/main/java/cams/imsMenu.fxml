@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="parent" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.cams.ims.ImsMenuController">
+    <stylesheets>
+        <URL value="@/main/java/css/practicegui.css" />
+    </stylesheets>
+   <children>
+      <BorderPane prefHeight="410.0" prefWidth="610.0" stylesheets="@../css/practicegui.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane fx:id="anchorpane" prefHeight="309.0" prefWidth="610.0" stylesheets="@../css/practicegui.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fx:id="mainHBox" alignment="CENTER" layoutX="141.0" layoutY="81.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox fx:id="vbox1" alignment="CENTER">
+                           <children>
+                              <Button fx:id="addItem" mnemonicParsing="false" onAction="#handleAddItemAction" prefHeight="53.0" prefWidth="150.0" style="-fx-font-size: 12px;" text="Add Resource Item">
+                                 <font>
+                                    <Font name="Century Gothic" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="addCat" mnemonicParsing="false" prefHeight="53.0" prefWidth="150.0" style="-fx-font-size: 12px;" text="Add Item Category">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="vbox2" alignment="CENTER">
+                           <children>
+                              <Button fx:id="editItem" mnemonicParsing="false" onAction="#handleSelectItemAction" prefHeight="53.0" prefWidth="186.0" style="-fx-font-size: 12px;" text="Edit or Delete Resource Item">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="editCat" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="186.0" style="-fx-font-size: 12px;" text="Edit or Delete Item Category">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="vbox4" alignment="CENTER">
+                           <children>
+                              <Button fx:id="viewItem" mnemonicParsing="false" onAction="#handleViewAction" prefHeight="53.0" prefWidth="150.0" style="-fx-font-size: 12px;" text="View Resource Item">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="viewCat" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="150.0" style="-fx-font-size: 12px;" text="View Item Category">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </AnchorPane>
+         </center>
+         <top>
+            <AnchorPane>
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="600.0" spacing="25.0" stylesheets="@../css/practicegui.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="title" fitHeight="68.0" fitWidth="200.0">
+                           <image>
+                              <Image url="@../images/title.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="main1" alignment="CENTER" prefHeight="88.0" prefWidth="249.0" stylesheets="@../css/practicegui.css" text="Inventory Management Subsystem Menu" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Century Gothic Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="logo" fitHeight="68.0" fitWidth="74.0">
+                           <image>
+                              <Image url="@../images/Drawing.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <HBox fx:id="smallHBox" alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="153.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="back" mnemonicParsing="false" onAction="#handleBackAction" prefHeight="52.0" prefWidth="50.0">
+                     <HBox.margin>
+                        <Insets left="15.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="home" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleHomeAction" prefHeight="52.0" prefWidth="50.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

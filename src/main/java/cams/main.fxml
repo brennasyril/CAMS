@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.cams.MainMenuController">
+
+   <children>
+      <SplitPane dividerPositions="0.2563" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ImageView fx:id="title" fitHeight="80.0" fitWidth="222.0" layoutX="10.0" layoutY="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                     <image>
+                        <Image url="@../images/title.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="main" alignment="CENTER" layoutX="251.0" layoutY="40.0" text="Main Menu" textAlignment="CENTER" AnchorPane.topAnchor="40.0">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="logo" fitHeight="68.0" fitWidth="74.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../images/Drawing.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <VBox fx:id="box" alignment="TOP_CENTER" prefHeight="315.0" prefWidth="600.0" style="-fx-background-color: #A7B9B6;" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button fx:id="ims" mnemonicParsing="false" onAction="#handleIMSAction" prefHeight="78.25" prefWidth="268.0" text="Inventory Management Subsystem" />
+                        <Button fx:id="fms" mnemonicParsing="false" prefHeight="78.25" prefWidth="268.0" text="Financial Management Subsystem" />
+                        <Button fx:id="cras" mnemonicParsing="false" onAction="#handleCRASAction" prefHeight="78.25" prefWidth="268.0" text="Crop-Resource Analysis Subsystem" />
+                        <Button fx:id="pas" mnemonicParsing="false" prefHeight="78.25" prefWidth="267.0" text="Performance Analysis Subsystem" />
+                     </children>
+                     <stylesheets>
+                        <URL value="@../css/practicegui.css" />
+                     </stylesheets>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="500.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.cams.cras.CropAddController">
+    <stylesheets>
+        <URL value="@practicegui.css" />
+      <URL value="@../css/practicegui.css" />
+    </stylesheets>
+   <children>
+      <ImageView fx:id="logo" fitHeight="68.0" fitWidth="74.0" layoutX="520.0" layoutY="5.0">
+         <image>
+            <Image url="@../src/main/java/images/Drawing.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="title" fitHeight="68.0" fitWidth="200.0" layoutX="6.0">
+         <image>
+            <Image url="@../src/main/java/images/title.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="main" alignment="CENTER" layoutX="205.0" layoutY="17.0" prefHeight="35.0" prefWidth="191.0" text="Add Resource Item">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <SplitPane fx:id="split" layoutX="68.0" layoutY="85.0" prefHeight="315.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+         <items>
+            <AnchorPane fx:id="anchor2" prefHeight="297.0" prefWidth="598.0">
+               <children>
+                  <HBox fx:id="hbox" prefHeight="313.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox fx:id="vbox1" prefHeight="200.0" prefWidth="199.33" stylesheets="@../src/main/java/css/practicegui.css">
+                           <children>
+                              <Label fx:id="code" alignment="BOTTOM_CENTER" prefHeight="36.0" prefWidth="72.0" text="Crop Code" textAlignment="CENTER" />
+                              <TextField fx:id="codeField" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="166.0">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label fx:id="name" alignment="BOTTOM_CENTER" prefHeight="45.0" prefWidth="103.0" text="Crop Name" />
+                              <TextField fx:id="nameField" prefHeight="25.0" prefWidth="166.0">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </TextField>
+                              <Label fx:id="category" alignment="BOTTOM_CENTER" prefHeight="45.0" prefWidth="89.0" text="Plant Family" />
+                              <ComboBox fx:id="categoryDrop" prefWidth="166.0">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Label fx:id="period" alignment="BOTTOM_CENTER" prefHeight="45.0" prefWidth="108.0" text="Crop Period" />
+                              <ComboBox fx:id="periodDrop" prefWidth="166.0">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                           </children>
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                        </VBox>
+                        <VBox fx:id="vbox2" prefHeight="364.0" prefWidth="250.0" stylesheets="@../src/main/java/css/practicegui.css">
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                           <children>
+                              <Label fx:id="condition" alignment="BOTTOM_CENTER" prefHeight="36.0" prefWidth="76.0" text="Condition" />
+                              <ComboBox fx:id="conditionDrop" prefHeight="30.0" prefWidth="2220.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Button fx:id="addExistButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleExistCondAction" prefHeight="46.0" prefWidth="220.0" text="Add Existing Condition">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="addNewButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNewCondAction" prefHeight="46.0" prefWidth="220.0" text="Add New Condition">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="vbox3" prefHeight="200.0" prefWidth="148.33" stylesheets="@../src/main/java/css/practicegui.css">
+                           <children>
+                              <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="46.0" prefWidth="115.0" text="Add Crop">
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="15.0" right="15.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

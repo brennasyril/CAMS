@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.cams.cras.CropAddController">
+    <stylesheets>
+      <URL value="@../css/practicegui.css" />
+    </stylesheets>
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="title" fitHeight="68.0" fitWidth="200.0">
+                     <image>
+                        <Image url="@../images/title.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="main" alignment="CENTER" prefHeight="35.0" prefWidth="191.0" text="Add Resource Item">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="logo" fitHeight="68.0" fitWidth="74.0">
+                     <image>
+                        <Image url="@../images/Drawing.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox prefHeight="53.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="back" mnemonicParsing="false" onAction="#handleBackAction" prefHeight="52.0" prefWidth="50.0">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#handleHomeAction" prefHeight="52.0" prefWidth="50.0" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+         <center>
+            <HBox fx:id="hbox" alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="vbox1" alignment="CENTER_LEFT">
+                     <children>
+                        <Label fx:id="code" alignment="BOTTOM_CENTER" prefHeight="36.0" prefWidth="78.0" style="-fx-font-weight: bold;" text="Crop Code" textAlignment="CENTER" />
+                        <TextField fx:id="codeField" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="166.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="name" alignment="BOTTOM_LEFT" prefHeight="45.0" prefWidth="103.0" style="-fx-font-weight: bold;" text="Crop Name" />
+                        <TextField fx:id="nameField" prefHeight="25.0" prefWidth="166.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="category" alignment="BOTTOM_CENTER" prefHeight="45.0" prefWidth="89.0" style="-fx-font-weight: bold;" text="Plant Family" />
+                        <ComboBox fx:id="plantFamDrop" prefWidth="166.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="36.0" prefWidth="84.0" style="-fx-font-weight: bold;" text="Crop Period">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ComboBox fx:id="periodDrop" layoutX="25.0" layoutY="290.0" prefWidth="166.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Button fx:id="periodButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNewPerAction" prefHeight="46.0" prefWidth="122.0" text="Add New Period">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="vbox2" alignment="CENTER_LEFT" prefWidth="250.0">
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                     <children>
+                        <Label fx:id="condition" alignment="BOTTOM_CENTER" prefHeight="36.0" prefWidth="76.0" style="-fx-font-weight: bold;" text="Condition" />
+                        <ComboBox fx:id="conditionDrop" prefHeight="30.0" prefWidth="250.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="26.0" prefWidth="155.0" text="Condition Requirement" />
+                        <TextField fx:id="conditionReq">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="condition1" alignment="BOTTOM_CENTER" layoutX="25.0" layoutY="75.0" prefHeight="36.0" prefWidth="76.0" style="-fx-font-weight: bold;" text="Condition" />
+                        <ComboBox fx:id="conditionDrop1" layoutX="25.0" layoutY="135.0" prefHeight="30.0" prefWidth="250.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Label alignment="BOTTOM_LEFT" layoutX="25.0" layoutY="199.0" prefHeight="26.0" prefWidth="155.0" text="Condition Requirement" />
+                        <TextField fx:id="conditionReq1" layoutX="25.0" layoutY="217.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="condition2" alignment="BOTTOM_CENTER" layoutX="25.0" layoutY="79.0" prefHeight="36.0" prefWidth="76.0" style="-fx-font-weight: bold;" text="Condition" />
+                        <ComboBox fx:id="conditionDrop2" layoutX="25.0" layoutY="102.0" prefHeight="30.0" prefWidth="250.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Label alignment="BOTTOM_LEFT" layoutX="25.0" layoutY="122.0" prefHeight="26.0" prefWidth="155.0" text="Condition Requirement" />
+                        <TextField fx:id="conditionReq2" layoutX="25.0" layoutY="140.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="extraVBox" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></VBox>
+                  <VBox fx:id="vbox3" alignment="CENTER_LEFT">
+                     <children>
+                        <Button fx:id="addExistButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleExistCondAction" prefHeight="46.0" prefWidth="220.0" text="Add Existing Condition">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="addNewButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNewCondAction" prefHeight="46.0" prefWidth="220.0" text="Add New Condition">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="46.0" prefWidth="115.0" text="Add Crop">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

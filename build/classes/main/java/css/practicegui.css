@@ -1,0 +1,49 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass 
+{
+	master-color: #A7B9B6; 
+	-fx-background-color: derive(master-color, 70%); 
+	-fx-font-size: 15px; 
+        -fx-font-family: CenturyGothic; 
+}
+
+.theme 
+{
+	-fx-background-color: #8DADA7; 
+}
+
+.greenTheme
+{
+	master-color: #F9F9D4; 
+	-fx-background-color: derive(master-color, 70%); 
+}
+
+.label
+{
+	-fx-font-color: #292E04; 
+	-fx-font-family: CenturyGothic; 
+	-fx-font-size: 15px; 
+	
+}
+.button
+{
+	-fx-color: #A3A68B; 
+	-fx-font-family: CenturyGothic; 
+	-fx-font-size: 12px; 
+}
+
+#back 
+{
+	-fx-background-image: url("../images/backArrow.png");
+	-fx-background-size: 50 50;
+}
+
+#home
+{
+	-fx-background-image: url("../images/homeButton.png");
+	-fx-background-size: 50 50;
+	-fx-background-repeat: no-repeat;
+}

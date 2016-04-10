@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchor" prefHeight="500.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@../css/practicegui.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.cams.ims.AddResourceItemController">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <HBox alignment="BOTTOM_LEFT" prefHeight="58.0" prefWidth="600.0" BorderPane.alignment="BOTTOM_LEFT">
+               <children>
+                  <Button fx:id="back" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBackAction" prefHeight="52.0" prefWidth="50.0">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="home" mnemonicParsing="false" onAction="#handleHomeAction" prefHeight="52.0" prefWidth="50.0" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+         <center>
+            <HBox fx:id="hbox" alignment="CENTER" prefHeight="313.0" prefWidth="598.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="vbox1" prefHeight="200.0" prefWidth="199.33">
+                     <children>
+                        <Label fx:id="code" alignment="BOTTOM_CENTER" prefHeight="36.0" prefWidth="72.0" text="Item Code" textAlignment="CENTER" />
+                        <TextField fx:id="codeField" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="166.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="name" alignment="BOTTOM_CENTER" prefHeight="45.0" prefWidth="74.0" text="Item Name" />
+                        <TextField fx:id="nameField" prefHeight="25.0" prefWidth="166.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="category" alignment="BOTTOM_CENTER" prefHeight="45.0" prefWidth="89.0" text="Item Category" />
+                        <ComboBox fx:id="categoryDrop" prefWidth="166.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <Label fx:id="qoh" alignment="BOTTOM_CENTER" prefHeight="45.0" prefWidth="108.0" text="Quantity On Hand" />
+                        <TextField fx:id="qohField" prefHeight="25.0" prefWidth="166.0">
+                           <VBox.margin>
+                              <Insets bottom="15.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="name1" alignment="BOTTOM_CENTER" layoutX="25.0" layoutY="81.0" prefHeight="29.0" prefWidth="113.0" text="Item Description">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="descField" layoutX="25.0" layoutY="112.0" prefHeight="25.0" prefWidth="166.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="vbox2" prefHeight="364.0" prefWidth="199.0">
+                     <children>
+                        <Label fx:id="reorder" alignment="BOTTOM_CENTER" prefHeight="36.0" text="Reorder Quantity" />
+                        <TextField fx:id="reorderField">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="lastU" alignment="BOTTOM_CENTER" prefHeight="45.0" text="Last Unit Price" />
+                        <TextField fx:id="lastUField">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="avg" alignment="BOTTOM_CENTER" prefHeight="45.0" text="Average Unit Price" />
+                        <TextField fx:id="avgField">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="lastS" alignment="BOTTOM_CENTER" prefHeight="45.0" text="Last Selling Price" />
+                        <TextField fx:id="lastSField">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="vbox3" prefHeight="200.0" prefWidth="199.33">
+                     <children>
+                        <Label fx:id="current" alignment="BOTTOM_CENTER" prefHeight="36.0" text="Current Selling Price" />
+                        <TextField fx:id="currentField" prefHeight="25.0" prefWidth="166.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="acct" alignment="BOTTOM_CENTER" prefHeight="45.0" text="Account Number" />
+                        <TextField fx:id="acctField" prefHeight="25.0" prefWidth="166.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="upc" alignment="BOTTOM_CENTER" prefHeight="45.0" text="UPC Code" />
+                        <TextField fx:id="upcField" prefHeight="25.0" prefWidth="166.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label fx:id="sku" alignment="BOTTOM_CENTER" prefHeight="45.0" text="SKU Number" />
+                        <TextField fx:id="skuField" prefHeight="25.0" prefWidth="166.0">
+                           <VBox.margin>
+                              <Insets bottom="15.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="46.0" prefWidth="166.0" text="Add Resource Item">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+         </center>
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="title" fitHeight="68.0" fitWidth="200.0">
+                     <image>
+                        <Image url="@../images/title.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="main" alignment="CENTER" prefHeight="35.0" prefWidth="191.0" text="Add Resource Item">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="logo" fitHeight="68.0" fitWidth="74.0">
+                     <image>
+                        <Image url="@../images/Drawing.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

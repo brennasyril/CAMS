@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.cams.MainMenuController">
+    <stylesheets>
+        <URL value="@practicegui.css" />
+    </stylesheets>
+   <children>
+      <ImageView fx:id="logo" fitHeight="68.0" fitWidth="74.0" layoutX="520.0" layoutY="5.0">
+         <image>
+            <Image url="@../src/main/java/images/Drawing.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="title" fitHeight="68.0" fitWidth="200.0" layoutX="6.0">
+         <image>
+            <Image url="@../src/main/java/images/title.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="main" alignment="CENTER" layoutX="248.0" layoutY="17.0" prefHeight="35.0" prefWidth="104.0" text="Main Menu">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <SplitPane fx:id="split" layoutX="68.0" layoutY="85.0" prefHeight="315.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="theme">
+               <children>
+                  <Pane fx:id="pane" layoutX="174.0" layoutY="42.0" prefHeight="313.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox fx:id="box" alignment="TOP_CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="315.0" prefWidth="600.0" stylesheets="@practicegui.css">
+                           <children>
+                              <Button fx:id="ims" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="78.25" prefWidth="268.0" text="Inventory Management Subsystem" />
+                              <Button fx:id="fms" mnemonicParsing="false" prefHeight="78.25" prefWidth="268.0" text="Financial Management Subsystem" />
+                              <Button fx:id="cras" mnemonicParsing="false" prefHeight="78.25" prefWidth="268.0" text="Crop-Resource Analysis Subsystem" />
+                              <Button fx:id="pas" mnemonicParsing="false" prefHeight="78.25" prefWidth="267.0" text="Performance Analysis Subsystem" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
